@@ -6,6 +6,7 @@ import Packages from './components/Packages/Packages';
 import Blog from './components/Blog/Blog';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
+import Registration from './components/Registration/Registration';
 
 function App() {
   return (
@@ -27,9 +28,9 @@ function App() {
             <Route exact path="/login">
               <Login></Login>
             </Route>
-            {/* <Route exact path="/registration">
+            <Route exact path="/registration">
               <Registration></Registration>
-            </Route> */}
+            </Route>
             <Route exact path="*">
               <NotFound></NotFound>
             </Route>
