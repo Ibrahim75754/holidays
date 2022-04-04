@@ -10,3 +10,7 @@
     display: inline-block;
     display: flex;
 }
+
+.border-style{
+    border-bottom: 3px solid #3FD0D4;
+}

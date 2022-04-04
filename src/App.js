@@ -5,10 +5,11 @@ import Home from './components/Home/Home';
 import Packages from './components/Packages/Packages';
 import Blog from './components/Blog/Blog';
 import Header from './components/Shared/Header/Header';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
     <Router >
       <Header></Header>
           <Switch>
@@ -25,7 +26,8 @@ function App() {
               <Packages></Packages>
             </Route>
           </Switch>
-        </Router>
+      <Footer></Footer>    
+    </Router>
   </div>
   );
 }
