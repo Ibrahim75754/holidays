@@ -42,6 +42,34 @@ const useFirebase = () => {
             .finally(() => setLoading(false));
     }
 
+    //google signIn
+    const signInWithGoogle = (location, history) => {
+        setLoading(true);
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                //save user data to database
+                // saveUser(user.displayName, user.email, 'PUT');
+
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                setAuthError('');
+            }).catch((error) => {
+                setAuthError(error.message);
+            })
+            .finally(() => setLoading(false));
+    }
+    
+    const logout = () => {
+        setLoading(true);
+        signOut(auth).then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        })
+            .finally(() => setLoading(false));
+    }
+
     return  {
         user,
         // admin,
@@ -50,8 +78,8 @@ const useFirebase = () => {
         authError,
         registerUser,
         // loginUser,
-        // signInWithGoogle,
-        // logout,
+        signInWithGoogle,
+        logout,
     }
 };
 

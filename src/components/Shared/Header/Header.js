@@ -1,8 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
+  const {user}=useAuth();
+  console.log(user)
+
   const activeStyle = {
     color: "#3FD0D4",
     fontWeight: "bold",

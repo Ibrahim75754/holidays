@@ -7,6 +7,7 @@ import useAuth from '../../hooks/useAuth';
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     // const { loginUser, signInWithGoogle, authError } = useAuth();
+    const { signInWithGoogle, authError } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -26,7 +27,7 @@ const Login = () => {
     }
 
     const handleGoogleSignIn = () => {
-        // signInWithGoogle(location, history);
+        signInWithGoogle(location, history);
     }
     return (
         <div className="login-body d-flex justify-content-center align-items-center">
@@ -49,9 +50,9 @@ const Login = () => {
                         </div>
                     </div>
                 </form>
-                {/* {authError && <div className="alert alert-danger" role="alert">
+                {authError && <div className="alert alert-danger" role="alert">
                     {authError}
-                </div>} */}
+                </div>}
 
                 <p>New User? <Link to="/registration">Registration</Link></p>
                 <div>----------Login With----------</div>
