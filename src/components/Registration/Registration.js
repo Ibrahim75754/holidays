@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-// import useAuth from '../../hooks/useAuth';
+import useAuth from '../../hooks/useAuth';
 
 
 const Registration = () => {
-    // const { user, registerUser, loading, authError } = useAuth();
+    const { user, registerUser, loading, authError } = useAuth();
+
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
 
@@ -19,7 +20,7 @@ const Registration = () => {
     }
     const handleLoginSubmit = e => {
 
-        // registerUser(loginData.email, loginData.password, loginData.name, history);
+        registerUser(loginData.email, loginData.password, loginData.name, history);
 
         e.preventDefault();
     }
@@ -48,9 +49,9 @@ const Registration = () => {
                         </div>
                     </div>
                 </form>
-                {/* {authError && <div className="alert alert-danger" role="alert">
+                {authError && <div className="alert alert-danger" role="alert">
                     {authError}
-                </div>} */}
+                </div>}
 
                 <p>Already Have an Account? <Link to="/login">Login</Link></p>
 

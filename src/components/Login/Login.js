@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './Login.css';
 import icon from './../../img/logo/gmail.png';
-// import useAuth from '../../hooks/useAuth';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});

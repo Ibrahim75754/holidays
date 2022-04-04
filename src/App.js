@@ -7,10 +7,12 @@ import Blog from './components/Blog/Blog';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="">
+      <AuthProvider>
     <Router >
           <Switch>
             <Route exact path="/">
@@ -36,6 +38,7 @@ function App() {
             </Route>
           </Switch>
     </Router>
+    </AuthProvider>
   </div>
   );
 }
