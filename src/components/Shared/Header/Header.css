@@ -1,0 +1,12 @@
+.header-container{
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+.item{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    display: flex;
+}
