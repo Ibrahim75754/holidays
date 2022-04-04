@@ -28,7 +28,9 @@ const Header = () => {
               </li>
             </ul>
             <span className="navbar-text">
-              Navbar text with an inline element
+          
+              <NavLink className='btn btn-warning' to="/login">Login</NavLink>
+            
             </span>
           </div>
         </div>
