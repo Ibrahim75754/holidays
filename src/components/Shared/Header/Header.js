@@ -4,7 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
-  const {user}=useAuth();
+  const {user,logout}=useAuth();
   console.log(user)
 
   const activeStyle = {
@@ -31,11 +31,17 @@ const Header = () => {
                 <NavLink className="nav-link"  activeStyle={activeStyle} to="blog">Blog</NavLink>
               </li>
             </ul>
-            <span className="navbar-text">
-          
-              <NavLink className='btn btn-warning' to="/login">Login</NavLink>
-            
-            </span>
+            {user?.email ?
+                            <span className="navbar-text">
+                                <span className='text-success'>{user?.displayName}</span>
+                                <img className="rounded-circle ms-2" style={{ width: "40px" }} src={user.photoURL} alt="" />
+                                <button onClick={logout} className="btn btn-warning ms-2">LogOut</button>
+                            </span>
+                            :
+                            <span className="navbar-text">
+                                <NavLink className="" aria-current="page" to='/login'><button className="btn btn-success">Login</button></NavLink>
+                            </span>
+                        }
           </div>
         </div>
       </nav>
