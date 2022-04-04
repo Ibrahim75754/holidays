@@ -1,7 +1,7 @@
 .banner{
     background-image: url(../../img/banner/banner.jpg);
-    height: 600px; 
-    background-position: center; 
+    height: 800px; 
+    background-position: bottom; 
     background-repeat: no-repeat; 
     background-size: cover;
     opacity: 0.8;
@@ -9,7 +9,7 @@
 }
 .dark-overly{
     background: rgba(0, 0, 0, 0.5);
-    height: 600px; 
+    height: 800px; 
 
 }
 .text-position{
