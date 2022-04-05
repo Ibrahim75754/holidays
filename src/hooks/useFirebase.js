@@ -128,7 +128,7 @@ const useFirebase = () => {
         loading,
         authError,
         registerUser,
-        // loginUser,
+        loginUser,
         signInWithGoogle,
         logout,
     }
