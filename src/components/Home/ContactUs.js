@@ -4,8 +4,8 @@ import './ContactUs.css';
 const ContactUs = () => {
     return (
         <div className="bg">
-            <div className="bg-overly">
-            <div className="container mb-5 text-white ">
+            <div className="bg-overlay">
+            <div className="container text-white">
                 <div className="row">
                     <div className="col-md-4 p-5">
                         <img src="https://i.ibb.co/VCy31qb/pexels-photo-2215380.jpg" alt="" className="img-fluid w-100 h-100" />

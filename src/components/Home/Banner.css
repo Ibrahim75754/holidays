@@ -4,7 +4,7 @@
     background-position: bottom; 
     background-repeat: no-repeat; 
     background-size: cover;
-    opacity: 0.8;
+    opacity: 1;
     
 }
 .dark-overly{
@@ -20,4 +20,7 @@
 }
 .text-size{
     font-size: 50px;
+}
+.sub-title{
+    color: #3FD0D4;
 }
