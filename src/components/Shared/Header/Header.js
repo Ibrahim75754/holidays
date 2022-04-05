@@ -30,6 +30,19 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink className="nav-link"  activeStyle={activeStyle} to="blog">Blog</NavLink>
               </li>
+              {user?.email && 
+              <>
+                  <li className="nav-item">
+                    <NavLink className="nav-link"  activeStyle={activeStyle} to="myOrders">My Orders</NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link"  activeStyle={activeStyle} to="allOrders">All Orders</NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link"  activeStyle={activeStyle} to="addPackage">Add Package</NavLink>
+                  </li>
+              </>
+              }
             </ul>
             {user?.email ?
                             <span className="navbar-text">

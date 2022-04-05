@@ -9,12 +9,19 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PackagesDetails from './components/Packages/PackagesDetails';
+import MyOrders from './components/DashboardPages/MyOrders';
+import AllOrders from './components/DashboardPages/AllOrders';
+import AddPackage from './components/DashboardPages/AddPackage';
+import Header from './components/Shared/Header/Header';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   return (
     <div className="">
       <AuthProvider>
     <Router >
+      <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -28,6 +35,24 @@ function App() {
             <Route exact path="/packages">
               <Packages></Packages>
             </Route>
+            <PrivateRoute exact path="/home/:pacId">
+              <PackagesDetails></PackagesDetails>
+            </PrivateRoute>
+            <PrivateRoute exact path="/myOrders">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute exact path="/allOrders">
+              <AllOrders></AllOrders>
+            </PrivateRoute>
+            {/* <PrivateRoute exact path="/managePackage">
+              <ManageAllPackage></ManageAllPackage>
+            </PrivateRoute>
+            <PrivateRoute exact path="/packages/update/:id">
+              <UpdatePackage></UpdatePackage>
+            </PrivateRoute> */}
+            <PrivateRoute exact path="/addPackage">
+              <AddPackage></AddPackage>
+            </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
             </Route>
@@ -38,6 +63,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
     </Router>
     </AuthProvider>
   </div>

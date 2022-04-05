@@ -1,8 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
+
 import Package from './Package';
 
 const Packages = () => {
@@ -15,7 +14,7 @@ const Packages = () => {
 
     return (
         <div>
-            <Header></Header>
+           
             <div className="container py-5">
             <div className="text-center pb-4">
                 <h1>POPULAR PACKAGES</h1>
@@ -30,7 +29,7 @@ const Packages = () => {
                 }
             </div>
         </div>
-            <Footer></Footer>
+            
         </div>
     );
 };
