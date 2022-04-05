@@ -8,6 +8,7 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <Route exact path="/blog">
+            <PrivateRoute exact path="/blog">
               <Blog></Blog>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/packages">
               <Packages></Packages>
             </Route>
