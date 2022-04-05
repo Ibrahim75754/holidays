@@ -1,0 +1,16 @@
+.bg{
+    background-image: url(../../img/banner/contactus.jpg);
+    height: 500px; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    opacity: 1;
+
+    position: relative;
+    background-attachment: fixed;
+}
+.bg-overly{
+    background: rgba(0, 0, 0, 0.5);
+    height: 500px; 
+
+}
