@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Package.css';
 
 const Package = (props) => {
-    const { _id, name, img, description, price, duration } = props.Package;
+    const { _id, name, img, description, price, duration } = props.pac;
     return (
         <div>
             <div className="col">
