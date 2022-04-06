@@ -14,7 +14,7 @@ const PackagesDetails = () => {
                 setServices(data));
     }, []);
     const details = services.find(service => service._id === pacId);
-    // console.log(details)........................................
+    console.log(details?.name);
 
 
 
@@ -23,7 +23,7 @@ const PackagesDetails = () => {
         console.log(data);
 
         // use AXIOS for post into data base
-        axios.post('/placeOrder', data)
+        axios.post('http://localhost:5000/placeOrder', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {
