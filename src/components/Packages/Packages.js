@@ -17,7 +17,8 @@ const Packages = () => {
            
             <div className="container py-5">
             <div className="text-center pb-4">
-                <h1>POPULAR PACKAGES</h1>
+                <h4 className='sub-title'>Choose your</h4>   
+                <h1>Perfect Holiday</h1>
                 <p>The practice involves swishing oil around in your mouth to remove bacteria, which can turn into plaque and cause your teeth to look yellow.</p>
             </div>
             <div className="row row-cols-1 row-cols-md-3 g-4">
