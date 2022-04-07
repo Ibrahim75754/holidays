@@ -16,6 +16,7 @@ import AddPackage from './components/DashboardPages/AddPackage';
 import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
 import ManageAllPackage from './components/DashboardPages/ManageAllPackage';
+import UpdatePackage from './components/DashboardPages/UpdatePackage';
 
 function App() {
   return (
@@ -48,10 +49,9 @@ function App() {
             <PrivateRoute exact path="/managePackage">
               <ManageAllPackage></ManageAllPackage>
             </PrivateRoute>
-            {/* 
             <PrivateRoute exact path="/packages/update/:id">
               <UpdatePackage></UpdatePackage>
-            </PrivateRoute> */}
+            </PrivateRoute>
             <PrivateRoute exact path="/addPackage">
               <AddPackage></AddPackage>
             </PrivateRoute>
