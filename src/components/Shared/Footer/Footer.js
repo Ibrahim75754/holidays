@@ -26,7 +26,7 @@ const Footer = () => {
                             <textarea className="form-control" placeholder="Description" rows="3"></textarea>
                         </div>
                         <div className="mb-3">
-                            <button className="btn btn-warning">Send Now</button>
+                            <button className="btn btn-color">Send Now</button>
                         </div>
                     </div>
                 </div>

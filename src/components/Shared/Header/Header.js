@@ -8,7 +8,7 @@ const Header = () => {
   console.log(user)
 
   const activeStyle = {
-    color: "#3FD0D4",
+    color: "white",
     fontWeight: "bold",
 }
   return (
@@ -49,13 +49,13 @@ const Header = () => {
             </ul>
             {user?.email ?
                             <span className="navbar-text">
-                                <span className='text-success'>{user?.displayName}</span>
+                                <span className='sub-title'>{user?.displayName}</span>
                                 <img className="rounded-circle ms-2" style={{ width: "40px" }} src={user.photoURL} alt="" />
-                                <button onClick={logout} className="btn btn-warning ms-2">LogOut</button>
+                                <button onClick={logout} className="btn btn-color ms-2">LogOut</button>
                             </span>
                             :
                             <span className="navbar-text">
-                                <NavLink className="" aria-current="page" to='/login'><button className="btn btn-success">Login</button></NavLink>
+                                <NavLink className="" aria-current="page" to='/login'><button className="btn btn-color">Login</button></NavLink>
                             </span>
                         }
           </div>

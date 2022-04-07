@@ -59,7 +59,7 @@ const PackagesDetails = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <h3 className="text-center mb-2 text-warning">Book Now!!!</h3>
+                        <h3 className="text-center mb-2 sub-title">Fill up the Form for booking</h3>
                         <div>
                             <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column justify-content-center align-items-center">
                                 <input className="w-50 mb-3"  {...register("name")} type="text" value={user.displayName} required />
@@ -68,7 +68,7 @@ const PackagesDetails = () => {
                                 <input className="w-50 mb-3"  {...register("packageName")} type="text" value={details?.name} />
                                 <textarea className="w-50 mb-3"  {...register("address")} type="text" placeholder="Address" required />
                                 <input className="w-50 mb-3"  {...register("phone")} type="number" placeholder="Phone Number" required />
-                                <input className="btn btn-warning w-50 mb-3" type="submit" value="Complete Booking" />
+                                <input className="btn btn-color w-50 mb-3" type="submit" value="Book Now" />
                             </form>
                         </div>
                     </div>
