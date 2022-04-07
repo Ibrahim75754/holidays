@@ -15,6 +15,7 @@ import AllOrders from './components/DashboardPages/AllOrders';
 import AddPackage from './components/DashboardPages/AddPackage';
 import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
+import ManageAllPackage from './components/DashboardPages/ManageAllPackage';
 
 function App() {
   return (
@@ -44,9 +45,10 @@ function App() {
             <PrivateRoute exact path="/allOrders">
               <AllOrders></AllOrders>
             </PrivateRoute>
-            {/* <PrivateRoute exact path="/managePackage">
+            <PrivateRoute exact path="/managePackage">
               <ManageAllPackage></ManageAllPackage>
             </PrivateRoute>
+            {/* 
             <PrivateRoute exact path="/packages/update/:id">
               <UpdatePackage></UpdatePackage>
             </PrivateRoute> */}

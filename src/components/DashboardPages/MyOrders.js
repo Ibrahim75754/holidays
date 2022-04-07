@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const areUsure = window.confirm('Are You Sure, Want To Delete?');
         if (areUsure) {
-            fetch(`/myOrders/${id}`, {
+            fetch(`http://localhost:5000/myOrders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

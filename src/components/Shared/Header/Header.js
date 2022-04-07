@@ -41,6 +41,9 @@ const Header = () => {
                   <li className="nav-item">
                     <NavLink className="nav-link"  activeStyle={activeStyle} to="addPackage">Add Package</NavLink>
                   </li>
+                  <li className="nav-item">
+                    <NavLink className="nav-link"  activeStyle={activeStyle} to="managePackage">Manage Package</NavLink>
+                  </li>
               </>
               }
             </ul>
