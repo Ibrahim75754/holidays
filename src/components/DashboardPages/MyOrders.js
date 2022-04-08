@@ -11,7 +11,7 @@ const MyOrders = () => {
             .then(data => setPackages(data));
     }, []);
     const myOrders = packages.filter(pac => pac.email === user.email);
-    console.log(myOrders)
+    // //console.log(myOrders)
     let Id = 1;
 
     const handleDelete = id => {
@@ -22,7 +22,7 @@ const MyOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // //console.log(data);
                     if (data.deletedCount) {
                         alert('Delete Successful');
                         const remaining = packages.filter(pac => pac._id !== id);
@@ -36,7 +36,7 @@ const MyOrders = () => {
         <div>
             <h1 className="text-center my-4">My Orders List</h1>
             <div className="table-responsive">
-                <table class="table table-hover text-center">
+                <table className="table table-hover text-center">
                     <thead>
                         <tr>
                             <th scope="col">serial</th>

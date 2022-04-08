@@ -14,18 +14,18 @@ const PackagesDetails = () => {
                 setServices(data));
     }, []);
     const details = services.find(service => service._id === pacId);
-    console.log(details?.name);
+    //console.log(details?.name);
 
 
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        //console.log(data);
 
         // use AXIOS for post into data base
         axios.post('http://localhost:5000/placeOrder', data)
             .then(res => {
-                console.log(res);
+                //console.log(res);
                 if (res.data.insertedId) {
                     alert('Order successfully complete');
                     reset();

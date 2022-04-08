@@ -5,11 +5,11 @@ import { useForm } from 'react-hook-form';
 const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        // //console.log(data);
         // use AXIOS for post into data base
         axios.post('http://localhost:5000/packages', data)
             .then(res => {
-                console.log(res);
+                // //console.log(res);
                 if (res.data.insertedId) {
                     alert('data insert successfully');
                     reset();
