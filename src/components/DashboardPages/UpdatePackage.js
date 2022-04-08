@@ -6,7 +6,7 @@ const UpdatePackage = () => {
 
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/update/${id}`)
+        fetch(`http://nameless-plains-10260.herokuapp.com/packages/update/${id}`)
             .then(res => res.json())
             .then(data =>
                 setPackages(data));
@@ -40,7 +40,7 @@ const UpdatePackage = () => {
         setPackages(update);
     }
     const handleUpdatePackage = e => {
-        fetch(`http://localhost:5000/packages/update/${id}`, {
+        fetch(`http://nameless-plains-10260.herokuapp.com/packages/update/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

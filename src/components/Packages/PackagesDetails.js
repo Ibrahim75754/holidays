@@ -8,7 +8,7 @@ const PackagesDetails = () => {
     const { pacId } = useParams();
     const [pac, setPac] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/update/${pacId}`)
+        fetch(`http://nameless-plains-10260.herokuapp.com/packages/update/${pacId}`)
             .then(res => res.json())
             .then(data => setPac(data));
     }, []);
@@ -22,7 +22,7 @@ const PackagesDetails = () => {
         //console.log(data);
 
         // use AXIOS for post into data base
-        axios.post('http://localhost:5000/placeOrder', data)
+        axios.post('http://nameless-plains-10260.herokuapp.com/placeOrder', data)
             .then(res => {
                 //console.log(res);
                 if (res.data.insertedId) {

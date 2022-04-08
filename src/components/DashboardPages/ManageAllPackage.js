@@ -4,7 +4,7 @@ import './ManageAllPackage.css';
 const ManageAllPackage = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('http://nameless-plains-10260.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setPackages(data));
     }, []);
@@ -13,7 +13,7 @@ const ManageAllPackage = () => {
     const handleDelete = id => {
         const areUsure = window.confirm('Are You Sure, Want To Delete?');
         if (areUsure) {
-            fetch(`http://localhost:5000/packages/${id}`, {
+            fetch(`http://nameless-plains-10260.herokuapp.com/packages/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

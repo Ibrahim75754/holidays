@@ -7,7 +7,7 @@ import Package from './Package';
 const Packages = () => {
     const [packages,setPackages]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/packages')
+        fetch('http://nameless-plains-10260.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data));
     },[]);

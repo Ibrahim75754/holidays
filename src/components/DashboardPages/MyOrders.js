@@ -6,7 +6,7 @@ const MyOrders = () => {
 
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/myOrders')
+        fetch('http://nameless-plains-10260.herokuapp.com/myOrders')
             .then(res => res.json())
             .then(data => setPackages(data));
     }, []);
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const areUsure = window.confirm('Are You Sure, Want To Delete?');
         if (areUsure) {
-            fetch(`http://localhost:5000/myOrders/${id}`, {
+            fetch(`http://nameless-plains-10260.herokuapp.com/myOrders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
