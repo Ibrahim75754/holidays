@@ -6,15 +6,14 @@ import useAuth from '../../hooks/useAuth';
 
 const PackagesDetails = () => {
     const { pacId } = useParams();
-    const [services, setServices] = useState([]);
+    const [pac, setPac] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch(`http://localhost:5000/packages/update/${pacId}`)
             .then(res => res.json())
-            .then(data =>
-                setServices(data));
+            .then(data => setPac(data));
     }, []);
-    const details = services.find(service => service._id === pacId);
-    //console.log(details?.name);
+    // const details = services.find(service => service._id === pacId);
+    
 
 
 
@@ -44,16 +43,16 @@ const PackagesDetails = () => {
                     <div className="col-md-6 border-end">
                         <div className="row">
                             <div className="col-md-6">
-                                <img src={details?.img} className="img-fluid h-100" alt="" />
+                                <img src={pac?.img} className="img-fluid h-100" alt="" />
                             </div>
                             <div className="col-md-6">
                                 <div className="py-3">
-                                    <h1>{details?.name}</h1>
+                                    <h1>{pac?.name}</h1>
                                     <p>Package Id No. {pacId}</p>
                                 </div>
-                                <p>Packages Offering price: ${details?.price}</p><br />
+                                <p>Packages Offering price: ${pac?.price}</p><br />
                                 <h6>Details:</h6>
-                                <p>{details?.description}</p>
+                                <p>{pac?.description}</p>
 
                             </div>
                         </div>
@@ -65,7 +64,7 @@ const PackagesDetails = () => {
                                 <input className="w-50 mb-3"  {...register("name")} type="text" value={user.displayName} required />
                                 <input className="w-50 mb-3" {...register("email")} type="email" value={user.email} required />
                                 <input className="w-50 mb-3"  {...register("packageId")} type="text" value={pacId} />
-                                <input className="w-50 mb-3"  {...register("packageName")} type="text" value={details?.name} />
+                                <input className="w-50 mb-3"  {...register("packageName")} type="text" value={pac?.name} />
                                 <textarea className="w-50 mb-3"  {...register("address")} type="text" placeholder="Address" required />
                                 <input className="w-50 mb-3"  {...register("phone")} type="number" placeholder="Phone Number" required />
                                 <input className="btn btn-color w-50 mb-3" type="submit" value="Book Now" />
